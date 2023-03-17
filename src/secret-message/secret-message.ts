@@ -164,8 +164,8 @@ export class SecretMessageComponent implements OnInit {
         this.sender = sender;
       }
 
-      this.cipher.secretCipher.set(this.cipher.createNewCipherKey());
-      this.cipher.uncodedCipher.set([]);
+      this.cipher.cipher.set(this.cipher.createNewCipherKey());
+      this.cipher.decodedCipher.set([]);
 
       let url = this.platformLocation.href;
       this.clipboard.copy(url);
