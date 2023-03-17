@@ -7,6 +7,7 @@ import { LetterKeyComponent } from './key/letter-key';
 import { LetterGuessComponent } from './guess/letter-guess';
 import { CipherKey, CipherService } from './service.cipher';
 import { MessageService } from '../secret-message/service.message';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'cipher',
@@ -16,10 +17,13 @@ import { MessageService } from '../secret-message/service.message';
     LetterKeyComponent,
     LetterGuessComponent,
     DragDropModule,
+    MatTooltipModule,
   ],
   template: `
   <div class="cipher-wrapper" cdkDropListGroup>
-    <div class="key-container">
+  <div class="key-container"
+    matTooltip="Drap and drop black letters to the correct white keypad button to solve the secret message!"
+    [matTooltipPosition]="'above'">
       <letter-key 
         *ngFor="let l of this.cipher.alphabet" 
         [letter]="l"
@@ -71,7 +75,7 @@ export class CipherComponent implements OnInit {
 
   // Preseed the cypher with any solved values plus "a" and "n"
   ngOnInit(): void {
-    for (let item of this.cipher.secretCipher()) {
+    for (let item of this.cipher.cipher()) {
       if (this.cipher.checkForMatch(item.key, item.value)) {
         this.addSolution(item.value, item.key);
       } else if (item.key === 'a') {
@@ -105,11 +109,11 @@ export class CipherComponent implements OnInit {
   addSolution(key: string, value: string) {
     let solution: CipherKey = { key: key, value: value };
 
-    this.cipher.uncodedCipher.set([...this.cipher.uncodedCipher(), solution]);
+    this.cipher.decodedCipher.set([...this.cipher.decodedCipher(), solution]);
   }
 
   getCipherSolution(char: string): string | null {
-    for (var key of this.cipher.uncodedCipher()) {
+    for (var key of this.cipher.decodedCipher()) {
       if (key.key === char) return key.value;
     }
     return '?';

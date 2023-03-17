@@ -9,14 +9,14 @@ export class MessageService {
     'Angular Signals are in developer preview in v16 today!'
   );
 
-  secretCode = computed(() =>
-    this.translateSecretMessage(
-      this.superSecretMessage(),
-      this.cipher.secretCipher()
-    )
+  secretMessage = computed(() =>
+    this.translateSecretMessage(this.superSecretMessage(), this.cipher.cipher())
   );
   solvedMessage = computed(() =>
-    this.translateSecretMessage(this.secretCode(), this.cipher.uncodedCipher())
+    this.translateSecretMessage(
+      this.secretMessage(),
+      this.cipher.decodedCipher()
+    )
   );
 
   constructor(private cipher: CipherService) {}

@@ -13,13 +13,13 @@ const values = [...ALPHABET];
   providedIn: 'root',
 })
 export class CipherService {
-  secretCipher = signal(this.createNewCipherKey());
-  uncodedCipher = signal<CipherKey[]>([]);
+  cipher = signal(this.createNewCipherKey());
+  decodedCipher = signal<CipherKey[]>([]);
 
   alphabet = ALPHABET;
   unsolvedAlphabet = computed(() =>
     ALPHABET.filter(
-      (letter) => !this.uncodedCipher().find((guess) => guess.value === letter)
+      (letter) => !this.decodedCipher().find((guess) => guess.value === letter)
     )
   );
 
@@ -35,7 +35,7 @@ export class CipherService {
   }
 
   checkForMatch(key: string, value: string): boolean {
-    for (var item of this.secretCipher()) {
+    for (var item of this.cipher()) {
       if (item.key === value && item.value === key) {
         return true;
       }
