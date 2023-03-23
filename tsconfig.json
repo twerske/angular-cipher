@@ -10,9 +10,9 @@
     "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "ES2021",
+    "target": "ES2022",
     "typeRoots": ["node_modules/@types"],
-    "lib": ["ES2021", "dom", "ES2021.String"]
+    "lib": ["ES2022", "dom", "ES2022.String"]
   },
   "angularCompilerOptions": {
     "strictTemplates": true,
