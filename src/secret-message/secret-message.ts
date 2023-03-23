@@ -28,16 +28,15 @@ import { CipherService } from '../cipher/service.cipher';
       border-radius: 3% 3% 20% 20%/3% 3% 6.5% 6.5%;
       background: #0d0d0d;
       position: relative;
-      height: 47%;
+      margin: 0 2rem;
       aspect-ratio: 10/9;
-      margin: auto;
       transform: translateY(10%);
       box-shadow: inset 1px 2px 3px -1px #fff9, 0 1px 5px -1px #00000080;
     }
 
     .message {
       color: #000;
-      overflow: hidden;
+      overflow: auto;
       height: 78%;
       aspect-ratio: 1/1;
       background: #efefef;
@@ -82,7 +81,7 @@ import { CipherService } from '../cipher/service.cipher';
     }
 
     h1 {
-      font-size: clamp(16px, 6vw, 35px);
+      font-size: clamp(10px, 6vw, 50px);
       font-weight: 600;
       letter-spacing: .06rem;
       color: black;
@@ -109,7 +108,6 @@ import { CipherService } from '../cipher/service.cipher';
       font-family: "Martian Mono", sans-serif;
       font-size: clamp(10px, 3vw, 20px);
 
-      // color: #c0e0c7;
       text-shadow: -1px -1px 1.2px rgb(255 255 255 / 50%), 1px 1px 1px rgb(1 1 1 / 7%);
       background: transparent;
 
@@ -120,7 +118,7 @@ import { CipherService } from '../cipher/service.cipher';
       border-radius: 10%;
 
     }
-  `,
+  `
   ],
 })
 export class SecretMessageComponent implements OnInit {

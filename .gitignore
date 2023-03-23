@@ -1,4 +1,6 @@
 .DS_STORE
+.angular/
+package-lock.json
 
 /dist/
 /bazel-out

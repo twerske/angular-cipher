@@ -28,12 +28,13 @@ import { CommonModule } from '@angular/common';
     }
 
     p {
-      font-size: clamp(16px, 3vw, 20px);
+      font-size: clamp(16px, 3vw, 30px);
       margin: 0;
 
       color: white;
       text-shadow: 1px 2px 1px rgb(255 255 255 / 50%);
-  `,
+    }
+  `
   ],
 })
 export class LetterGuessComponent {

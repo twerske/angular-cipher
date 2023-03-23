@@ -11,13 +11,16 @@ html {
 }
 
 body {
-  z-index: -2;
-  position: relative;
-  border-radius: 20% 20% 49% 49%/3% 3% 9.5% 9.5%;
-  background-image: linear-gradient(to right bottom, #38a852, #1c6c2e);
-  width: clamp(15rem, 96vw, 35rem);
+  width: clamp(800px, 96vw, 35rem);
+  height: fit-content;
   aspect-ratio: 10/17;
   margin: auto;
+
+  z-index: -2;
+  position: relative;
+
+  border-radius: 20% 20% 49% 49%/3% 3% 9.5% 9.5%;
+  background-image: linear-gradient(to right bottom, #38a852, #1c6c2e);
   box-shadow: inset 1px 5px 5px -1px #fff9, inset -1px -2px 5px -1px #00000080,
     0 1px 1px #00000013, 0 2px 2px #00000014, 0 4px 4px #0000001a,
     0 8px 8px #0003, 0 16px 16px #00000038;

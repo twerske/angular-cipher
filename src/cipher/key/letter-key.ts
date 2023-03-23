@@ -26,7 +26,7 @@ import { CommonModule } from '@angular/common';
 
     .answer, .key, p {
       margin: 0;
-      font-size: clamp(10px, 3vw, 20px);
+      font-size: clamp(10px, 3vw, 30px);
     }
 
     .solved {
@@ -36,7 +36,7 @@ import { CommonModule } from '@angular/common';
     }
 
     .solved p {
-      font-size: clamp(16px, 3vw, 20px);
+      font-size: clamp(16px, 3vw, 30px);
     }
   `,
   ],

@@ -50,9 +50,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     `
     .cipher-wrapper {
       z-index: 100;
-      height: 47%;
+      margin: 0 2rem;
       aspect-ratio: 10/9;
-      margin: auto;
       transform: translateY(15%);
     }
 
