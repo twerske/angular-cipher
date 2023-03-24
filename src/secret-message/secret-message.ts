@@ -81,7 +81,7 @@ import { CipherService } from '../cipher/service.cipher';
     }
 
     h1 {
-      font-size: clamp(10px, 6vw, 50px);
+      font-size: clamp(16px, 6vw, 30px);
       font-weight: 600;
       letter-spacing: .06rem;
       color: black;

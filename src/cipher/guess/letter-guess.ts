@@ -28,7 +28,7 @@ import { CommonModule } from '@angular/common';
     }
 
     p {
-      font-size: clamp(16px, 3vw, 30px);
+      font-size: clamp(16px, 3vw, 20px);
       margin: 0;
 
       color: white;
