@@ -116,7 +116,7 @@ import { CipherService } from '../cipher/service.cipher';
       right: 15%;
 
       border-radius: 10%;
-
+      cursor: pointer;
     }
   `
   ],
